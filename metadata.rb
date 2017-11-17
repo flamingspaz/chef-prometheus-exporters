@@ -9,5 +9,3 @@ version          '0.5.0'
 supports 'ubuntu'
 supports 'centos', '>= 6.9'
 supports 'windows' # wmi_exporter only
-
-depends 'chocolatey'

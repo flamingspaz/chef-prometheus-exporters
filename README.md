@@ -76,7 +76,7 @@ end
 
 ## wmi_exporter
 
-Depends on the Chocolatey package manager.
+Expects the Chocolatey package manager to already be installed.  This is up to individuals to provide by including the [Chocolatey cookbook](https://github.com/chocolatey/chocolatey-cookbook) in their own wrapper cookbooks.
 
 * `version`, String, default: '0.2.7'
 * `enabled_collectors`, String, default: 'cpu,cs,logical_disk,net,os,service,system'
