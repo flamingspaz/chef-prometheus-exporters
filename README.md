@@ -67,10 +67,30 @@ The postgres_exporter resource supports running multiple copies of PostgreSQL ex
 * `user` System user to run exporter as. (default "postgres")
 
 ```ruby
-
 postgres_exporter '9.5_main' do
   data_source_name 'postgresql://localhost:5432/example'
   user 'postgres'
+end
+```
+
+## mysqld_exporter
+
+The mysqld_exporter resource supports running multiple copies of the MySQL exporter on the same system.
+
+* `instance_name` name of MySQL exporter instance. (**name attribute**)
+* `data_source_name` MySQL connection string
+* `config_my_cnf` Path to .my.cnf file to read MySQL credentials from. (default: ~/.my.cnf)
+* `log_format` If set use a syslog logger or JSON logging. Example: logger:syslog?appname=bob&local=7 or logger:stdout?json=true. Defaults to stderr.
+* `log_level` Only log messages with the given severity or above. Valid levels: [debug, info, warn, error, fatal].
+* `web_listen_address` Address to listen on for web interface and telemetry. (default "127.0.0.1:9104")
+* `web_telemetry_path` Path under which to expose metrics. (default "/metrics")
+* `user` System user to run exporter as. (default "mysql")
+
+```ruby
+mysqld_exporter 'main' do
+  data_source_name '/'
+  config_my_cnf '~/.my/cnf'
+  user 'mysql'
 end
 ```
 

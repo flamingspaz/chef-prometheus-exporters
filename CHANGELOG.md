@@ -1,5 +1,8 @@
 # prometheus_exporters
 
+## 0.5.1
+- [Kieren Scott] - MySQL database exporter resource
+
 ## 0.5.0
 - [Matt Mencel] - wmi_exporter recipe
 - [Viktor Radnai] - Adding 'enabled' node property for each exporter for use with Chef search
