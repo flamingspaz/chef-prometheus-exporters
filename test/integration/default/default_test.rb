@@ -9,6 +9,17 @@ describe service('node_exporter') do
   it { should be_running }
 end
 
+# Mysqld exporter
+describe port(9104) do
+  it { should be_listening }
+  its('processes') { should cmp(/^mysqld_expo/) }
+end
+
+describe service('mysqld_exporter_main') do
+  it { should be_enabled }
+  it { should be_running }
+end
+
 # Redis exporter
 describe port(9121) do
   it { should be_listening }
