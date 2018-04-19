@@ -1,5 +1,8 @@
 # prometheus_exporters
 
+## 0.5.2
+- [Viktor Radnai] - Bugfix: quote environment variables in sysV init script
+
 ## 0.5.1
 - [Kieren Scott] - MySQL database exporter resource
 
