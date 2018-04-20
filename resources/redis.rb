@@ -144,7 +144,6 @@ action :enable do
 end
 
 action :start do
-  action_install
   service 'redis_exporter' do
     action :start
   end
