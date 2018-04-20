@@ -1,6 +1,8 @@
 # prometheus_exporters
 
 ## 0.5.2
+- [Viktor Radnai] - Bugfix: race condition with redis_exporter binary missing before systemd trying to verify it
+- [Viktor Radnai] - Fix deprecation warnings
 - [Viktor Radnai] - Bugfix: quote environment variables in sysV init script
 
 ## 0.5.1
